@@ -57,7 +57,7 @@ module GRPC
         call: call,
         request: req
       ) do
-        resp = mth.call(req, call)
+        resp = mth.call(req)
         active_call.server_unary_response(
           resp,
           trailing_metadata: active_call.output_metadata
